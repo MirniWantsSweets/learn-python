@@ -9,6 +9,7 @@ jobs:
           sleep 120
           echo "Hello world"
   test2:
+    needs: test1
     runs-on: ubuntu-latest
     steps:
       - run: |
