@@ -12,4 +12,4 @@ jobs:
           script: |
             cat ./sudoku/main.py && pwd
       - run: |
-        cat ./sudoku/main.py && pwd
+          cat ./sudoku/main.py && pwd
