@@ -6,12 +6,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - run: |
-          apt update -y && apt install -y git
-          pwd
-          ls -la
-          echo "Hello world" > test.txt
-          git config --global user.name bot
-          git config --global user.email bot@bot.bot
-          git add test.txt
-          git commit -m "test2"
-          git push
+          sleep 120
+          echo "Hello world"
+  test2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          ls -lah
