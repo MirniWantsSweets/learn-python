@@ -9,9 +9,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - run: |
-          cat ./sudoku/main.py && pwd
-      - uses: actions/github-script@v7
-        id: script1
-        with:
-          script: |
-            cat ./sudoku/main.py && pwd
+          apt update -y && apt install -y git
+          pwd
+          ls -la
+          echo "Hello world" > test.txt
+          git config --global user.name bot
+          git config --global user.email bot@bot.bot
+          git add test.txt
+          git commit -m "test2"
+          git push
